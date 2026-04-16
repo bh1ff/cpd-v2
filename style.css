@@ -298,6 +298,30 @@ nav .nav-links a:hover, nav .nav-links a.active { color: var(--cyan); }
   content: '•'; position: absolute; left: 0; color: var(--purple);
 }
 
+/* Facilitator notes (collapsed by default) */
+.act-facil {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(123, 97, 255, 0.08);
+  border: 1px dashed rgba(123, 97, 255, 0.3);
+  border-radius: 8px;
+}
+.act-facil summary {
+  cursor: pointer; font-size: 0.8rem; font-weight: 600;
+  color: var(--purple); outline: none;
+  list-style: none;
+}
+.act-facil summary::before { content: '▸ '; }
+.act-facil[open] summary::before { content: '▾ '; }
+.act-facil ul { margin-top: 0.5rem; padding: 0; list-style: none; }
+.act-facil li {
+  padding: 0.2rem 0 0.2rem 1rem; position: relative;
+  font-size: 0.82rem; color: var(--muted);
+}
+.act-facil li::before {
+  content: '→'; position: absolute; left: 0; color: var(--purple);
+}
+
 /* ── Takeaway ── */
 .takeaway-box {
   background: linear-gradient(135deg, rgba(0, 212, 219, 0.08), rgba(233, 30, 140, 0.08));
